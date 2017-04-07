@@ -1,38 +1,33 @@
-## gulp-yfy-img
+## gulp-imgname
 
-优化图片加载
-* jpg修改为渐变式加载
-* png生产一倍图
+修改文件内的img名
 
 ## 安装
 
 ```bash
-    yarn add gulp-yfy-img --dev
+    yarn add gulp-imgname --dev
 ```
 
-## 安装依赖
-
-* mac
-```bash
-    brew install imagemagick --with-webp
-```
-
-* windows
-
-    下载安装[ImageMagick](http://www.imagemagick.org/script/index.php)
 
 ## 用法
 
 ```javascript
     const gulp = require('gulp');
-    const yfyImg=require('gulp-yfy-img');
+    const imgname=require('gulp-imgname');
     gulp.task('default',function(){
         gulp.src('./src/**/*.+(jpg|png)')
-        .pipe(yfyImg())
+        .pipe(imgname({prev:"max-"}))
         .pipe(gulp.dest('./dist'))
     })
 ```
 
 ## options
 
-待定
+*`prev`:string
+前缀
+
+*`next`:string
+后缀
+
+*`format`:string
+格式
