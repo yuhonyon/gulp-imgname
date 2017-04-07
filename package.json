@@ -1,6 +1,6 @@
 {
   "name": "gulp-imgname",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "修改html内的图片名称",
   "main": "index.js",
   "author": "yufangyang",
