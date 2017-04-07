@@ -1,0 +1,13 @@
+{
+  "name": "gulp-imgname",
+  "version": "1.0.1",
+  "description": "修改html内的图片名称",
+  "main": "index.js",
+  "author": "yufangyang",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.8",
+    "through2": "^2.0.3"
+  }
+}
