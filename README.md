@@ -15,7 +15,7 @@
     const gulp = require('gulp');
     const imgname=require('gulp-imgname');
     gulp.task('default',function(){
-        gulp.src('./src/**/*.+(jpg|png)')
+        gulp.src('./src/**/*.+(html|css|scss)',ignore:"/\.png/i")
         .pipe(imgname({prev:"max-"}))
         .pipe(gulp.dest('./dist'))
     })
@@ -23,11 +23,13 @@
 
 ## options
 
-*`prev`:string
+* `prev`:string
 前缀
 
-*`next`:string
+* `next`:string
 后缀
 
-*`format`:string
+* `format`:string
 格式
+* `ignore`:reg
+忽略

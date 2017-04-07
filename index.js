@@ -10,9 +10,10 @@ const ASSET_REG = {
 function gulpImgName(options) {
 
     let config = {
-        prev: 'aaa',
-        next: "bbb",
-        format: "ccc",
+        ignore:null,
+        prev: null,
+        next: null,
+        format: null,
     };
     if (typeof options == "object") {
         for (let i in options) {
@@ -48,6 +49,10 @@ function gulpImgName(options) {
 
                         if (/^https?:\/\//.test(src)) {
                             return str;
+                        }
+
+                        if(config.ignore&&eval(config.ignore).test(src)){
+                           return str; 
                         }
 
                         if (config.next) {
